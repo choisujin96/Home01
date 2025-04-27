@@ -26,22 +26,17 @@ public class Ex07 {
 		wonArray[8] = 5;
 		wonArray[9] = 1;
 		
-		for(int i=1; i<=price; i++) {
-				
+		
+		//시작은 0번방터부터;wonArray의 방수만큼 돈다; 돌때마다 1씩 증가
+		for(int i=0; i<wonArray.length; i++) {
+			int count = price/wonArray[i];	// 입력값/단위 나눴을 때 단위가 몇개나오는지?
+			if(count > 0) { //입력값에서 나눈 게 0보다 크면 출력해
+				System.out.println(wonArray[i] + "원:" + count + "개");
+				price = price%wonArray[i];
+		    	
+		    	
+		    }	
 		}
-		/*
-		System.out.print("50000원: "  );
-		System.out.print("10000원: "  );
-		System.out.print("5000원: "  );
-		System.out.print("1000원: " );
-		System.out.print("500원: "  );
-		System.out.print("100원: "  );
-		System.out.print("50원: "  );
-		System.out.print("10원: "  );
-		System.out.print("5원: " );
-		System.out.print("1원: ");
-		*/
-		//ㅠㅠㅠ다시하
 		
 		sc.close();
 	}
